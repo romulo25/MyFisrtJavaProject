@@ -14,7 +14,7 @@ public class ArrayExerciseTest {
 		for (int i = 0; i < 100; i++) {
 			intArray[i] = i + 1;
 		}
-		asserEqual(arrayExercise.addEvenNumber(intArray), 2500);
+		asserEquals(arrayExercise.addEvenNumbers(intArray), 2500);
 	}
 
 }
