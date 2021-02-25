@@ -51,6 +51,7 @@ public class StudentConsole {
 					.parse(scanner.nextLine()));
 		} catch (ParseException e) {
 			e.printStackTrace();
+		} finally {
 		}
 	}
 }
