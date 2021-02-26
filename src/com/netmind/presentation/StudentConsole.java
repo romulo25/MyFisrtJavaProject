@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 import com.netmind.business.StudentBl;
+import com.netmind.model.EnumStudent;
 import com.netmind.model.Student;
 
 public class StudentConsole {
@@ -18,15 +19,17 @@ public class StudentConsole {
 		do {
 			showPrincipalMenu();
 			option = Integer.parseInt(scanner.nextLine());
-
-			switch (option) {
-			case 1:
+			EnumStudent enumStudent = EnumStudent.values()[option];
+			switch (enumStudent) {
+			case ADD_STUDENT:
 				Student student = new Student();
 				addNewStudent(student, scanner);
 				studentBl.add(student);
 				break;
+			default:
+				break;
 			}
-		} while (option != 3);
+		} while (option != EnumStudent.EXIT.ordinal());
 		scanner.close();
 	}
 
