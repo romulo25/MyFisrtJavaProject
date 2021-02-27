@@ -1,5 +1,7 @@
 package com.netmind.business.integration.test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import com.netmind.array.ArrayExercise;
@@ -14,7 +16,7 @@ public class ArrayExerciseTest {
 		for (int i = 0; i < 100; i++) {
 			intArray[i] = i + 1;
 		}
-		asserEquals(arrayExercise.addEvenNumbers(intArray), 2500);
-	}
 
+		assertEquals(arrayExercise.addEvenNumber(intArray), 2500);
+	}
 }
